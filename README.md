@@ -5,10 +5,17 @@ This repository has two python code files ``` code1.py ``` and ``` code2.py ```.
 Part A: **Web Graph Page Ranking**
 This aims at implementing the PageRank Algorithm from stratch. 
 The algorithm is implemented with and without teleportations using numerical linear algebra package and **Power Iteration Method**
+We are taking the teleportation value as 0.1.
 
 Usage: 
-Run '''code1.py''' to run the program. The program allows user to enter the query.
+Run '''code1.py''' to run the program. 
+
+The program allows user to enter the query in form of a graph. The user is expected to enter the number of nodes and the number of edges in ```1, 2``` form.
+
 ```Functions and their uses:```
+The webpage ranks are calculated through the following methods:
+1. Numerical Linear Algebra Package: This method uses the linear algebra package in python to calculate the left eigen values and vectors
+2. Power Iteration Method: This method uses the funciton ```  ``` to calculate the values.
 
 
 Part B: **Hyperlink Induced Topic Search (HITS) Algorithm**
