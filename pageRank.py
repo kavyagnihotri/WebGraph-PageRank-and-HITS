@@ -13,7 +13,6 @@ The webpage ranks are calculated through the following methods:
 '''
 
 import numpy as np
-import networkx as nx
 
 # number of nodes in the graph 
 n=0
@@ -31,7 +30,6 @@ for i in range(e):
     v1, v2 = map(int, input("Enter pair of vertices: ").split())
     adjacencyMatrix[v1-1][v2-1] = 1
  
-G  = nx.from_numpy_array(np.array(adjacencyMatrix),create_using=nx.DiGraph)
  
 def vectorDifferenceError(matrix1, matrix2):
     '''Calculates the vector difference error of two matrices given as input'''    
@@ -112,12 +110,11 @@ for i in range(n):
     print('\t\t', PageRankLinAlg[i][0]+1, "(Weight: ", PageRankLinAlg[i][1], ")")
  
  
-# alpha is defined as 0 since we don't want any teleportations
-pr=nx.pagerank(G,alpha=0,tol=1e-08)
+
  
 adjacencyMatrix = np.array(adjacencyMatrix)
 TPMatrix = adjacencyMatrix/adjacencyMatrix.sum(axis=1)
- 
+
 def PagerankNoTeleport():
     '''
     Function to calculate the pageRank without teleporation
